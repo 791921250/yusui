@@ -498,10 +498,11 @@ input{font-family:inherit}
   .pane{animation:paneIn .26s ease both}
   @keyframes paneIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
   .pagedots{display:flex}
-  .scene{flex:0 0 auto;max-height:none;min-height:0}
+  .scene{flex:1 1 auto;max-height:none;min-height:0}
   .pane.center{overflow:hidden}
-  .acts{flex:0 1 auto;max-height:min(46vh,420px)}
-  .logpanel{flex:1 1 auto;margin-top:0;height:auto;min-height:176px;max-height:none}
+  .acts{flex:1 1 auto;min-height:0;max-height:min(46vh,420px)}
+  .muse{flex-shrink:0}
+  .logpanel{flex:0 0 clamp(148px,20vh,190px);margin-top:0;height:auto;min-height:0;max-height:none}
   .logpanel .log{flex:1 1 auto;max-height:none}
   .logpanel .panel-head{padding:6px 12px}
   .logpanel .log{padding:5px 12px;gap:4px}
