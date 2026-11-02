@@ -89,6 +89,8 @@ input{font-family:inherit}
 @keyframes bootBreath{from{transform:scale(1.02)}to{transform:scale(1.07)}}
 .boot-shade{
   position:absolute;right:0;top:0;bottom:0;width:56%;
+  transform:scale(1.02);transform-origin:center;
+  animation:bootBreath 24s ease-in-out infinite alternate;
   background:
     linear-gradient(90deg,#0c0207 0%,rgba(12,2,7,.94) 7%,rgba(12,2,7,.42) 26%,rgba(12,2,7,0) 58%),
     linear-gradient(0deg,rgba(12,2,7,.92) 0%,rgba(12,2,7,.2) 26%,transparent 52%),
@@ -108,6 +110,7 @@ input{font-family:inherit}
 .peony{position:absolute;z-index:1;pointer-events:none;filter:drop-shadow(0 0 16px rgba(207,166,109,.16))}
 .peony svg{display:block;width:100%;height:100%}
 .peony-tr{right:2%;top:2%;width:clamp(96px,11vw,156px);height:clamp(96px,11vw,156px);opacity:.5}
+.peony-bl{left:-2%;bottom:-3%;width:clamp(150px,20vw,280px);height:clamp(150px,20vw,280px);opacity:.26}
 .boot-orn{display:flex;align-items:center;gap:11px;margin-top:clamp(14px,2.6vh,24px);opacity:.8}
 .boot-orn i{height:1px;flex:1;max-width:86px;background:linear-gradient(90deg,transparent,rgba(207,166,109,.42))}
 .boot-orn i:last-child{background:linear-gradient(90deg,rgba(207,166,109,.42),transparent)}
@@ -590,6 +593,7 @@ input{font-family:inherit}
   .boot-orn{margin-top:16px}
   .boot-orn i{max-width:60px}
   .peony-tr{width:92px;height:92px;right:3%;top:1.5%;opacity:.46}
+  .peony-bl{width:168px;height:168px;left:-10%;bottom:-1%;opacity:.24}
   .boot-tags span{font-size:9px;padding:4px 8px}
   .boot-side,.boot-foot{display:none}
   .boot-actions{gap:9px;margin-top:18px}
@@ -686,6 +690,47 @@ b.npc:hover,b.npc:active{filter:brightness(1.16);text-shadow:0 0 9px var(--ng),0
 <div class="boot" id="boot">
   <div class="boot-art" id="bootArt"></div>
   <div class="boot-shade"></div>
+  <div class="peony peony-bl" aria-hidden="true">
+    <svg viewBox="0 0 240 240">
+      <defs>
+        <radialGradient id="pnB" cx="50%" cy="48%" r="60%">
+          <stop offset="0" stop-color="#f3dcb6" stop-opacity=".9"/>
+          <stop offset=".6" stop-color="#cfa66d" stop-opacity=".5"/>
+          <stop offset="1" stop-color="#cfa66d" stop-opacity=".1"/>
+        </radialGradient>
+        <path id="ptB" d="M0 -12 C-18 -28 -21 -60 0 -96 C21 -60 18 -28 0 -12Z"/>
+      </defs>
+      <g transform="translate(120 124)" fill="rgba(207,166,109,.05)" stroke="url(#pnB)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#ptB" xlink:href="#ptB"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(45)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(90)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(135)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(180)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(225)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(270)"/>
+        <use href="#ptB" xlink:href="#ptB" transform="rotate(315)"/>
+        <g transform="rotate(22.5) scale(.68)">
+          <use href="#ptB" xlink:href="#ptB"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(45)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(90)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(135)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(180)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(225)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(270)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(315)"/>
+        </g>
+        <g transform="rotate(15) scale(.42)">
+          <use href="#ptB" xlink:href="#ptB"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(60)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(120)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(180)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(240)"/>
+          <use href="#ptB" xlink:href="#ptB" transform="rotate(300)"/>
+        </g>
+        <circle r="7.5"/>
+      </g>
+    </svg>
+  </div>
   <div class="peony peony-tr" aria-hidden="true">
     <svg viewBox="0 0 240 240">
       <defs>
